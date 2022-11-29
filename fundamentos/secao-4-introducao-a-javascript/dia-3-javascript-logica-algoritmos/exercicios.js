@@ -36,3 +36,21 @@ for (arr of array) {
 
 console.log(biggestWord);
 console.log(smallestWord);
+
+let lowestNumber = 2;
+let highestNumber = 50;
+let largest = 0;
+
+for (let i = lowestNumber; i <= highestNumber; i++) {
+  let number = 0;
+
+  for (let j = 2; j < i; j++) {
+    if (i % j == 0) {
+      number = 1;
+      break;
+    }
+  }
+  if (i > 1 && number == 0) {
+    console.log(i);
+  }
+}
